@@ -13,6 +13,8 @@
 		EB89CA0C263F2DCA002C98CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB89CA0A263F2DCA002C98CD /* Main.storyboard */; };
 		EB89CA0E263F2DCB002C98CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB89CA0D263F2DCB002C98CD /* Assets.xcassets */; };
 		EB89CA11263F2DCB002C98CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB89CA0F263F2DCB002C98CD /* LaunchScreen.storyboard */; };
+		EBC974752641C8A600D06261 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBC974732641C8A600D06261 /* level2.txt */; };
+		EBC974762641C8A600D06261 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = EBC974742641C8A600D06261 /* level1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EB89CA0D263F2DCB002C98CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB89CA10263F2DCB002C98CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB89CA12263F2DCB002C98CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC974732641C8A600D06261 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
+		EBC974742641C8A600D06261 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				EB89CA0D263F2DCB002C98CD /* Assets.xcassets */,
 				EB89CA0F263F2DCB002C98CD /* LaunchScreen.storyboard */,
 				EB89CA12263F2DCB002C98CD /* Info.plist */,
+				EBC974742641C8A600D06261 /* level1.txt */,
+				EBC974732641C8A600D06261 /* level2.txt */,
 			);
 			path = Project8;
 			sourceTree = "<group>";
@@ -124,8 +130,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC974762641C8A600D06261 /* level1.txt in Resources */,
 				EB89CA11263F2DCB002C98CD /* LaunchScreen.storyboard in Resources */,
 				EB89CA0E263F2DCB002C98CD /* Assets.xcassets in Resources */,
+				EBC974752641C8A600D06261 /* level2.txt in Resources */,
 				EB89CA0C263F2DCA002C98CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nam.dawum.Project8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -315,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nam.dawum.Project8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
