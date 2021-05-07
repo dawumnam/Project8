@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var activatedButtons = [UIButton]()
     var solutions = [String]()
     
+    var correntAnswer = 0
     var score = 0 {
         didSet {
             scoreLabel.text = "Score: \(score)"
@@ -128,12 +129,13 @@ class ViewController: UIViewController {
 
                 // add it to the buttons view
                 buttonsView.addSubview(letterButton)
-
+              
                 // and also to our letterButtons array
                 letterButtons.append(letterButton)
             }
         }
-        
+        buttonsView.layer.borderWidth = 1
+        buttonsView.layer.borderColor = UIColor.gray.cgColor
 //        buttonsView.backgroundColor = .green
 //        cluesLabel.backgroundColor = .red
 //        answersLabel.backgroundColor = .blue
@@ -178,10 +180,22 @@ class ViewController: UIViewController {
             
             currentAnswer.text = ""
             score += 1
-            if score % 7 == 0 {
+            correntAnswer += 1
+            if correntAnswer % 7 == 0 {
                 let ac = UIAlertController(title: "You Passed", message: "Congratulations, Proceed to the next level", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: levelUp))
                 present(ac, animated: true)
+            }
+        } else {
+            let ac = UIAlertController(title: "Wrong!", message: "", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            present(ac, animated: true) {
+                self.currentAnswer.text = ""
+                for button in self.activatedButtons {
+                    button.isHidden = false
+                }
+                self.activatedButtons.removeAll()
+                self.score -= 1
             }
         }
         
@@ -190,7 +204,7 @@ class ViewController: UIViewController {
     func levelUp(action: UIAlertAction) {
         level += 1
         solutions.removeAll(keepingCapacity: true)
-        
+        correntAnswer = 0
         loadLevel()
         
         for button in letterButtons {
